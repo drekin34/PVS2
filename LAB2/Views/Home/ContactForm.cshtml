@@ -1,0 +1,18 @@
+﻿@model EmailFormModel
+
+<h2>Send Email</h2>
+<form asp-action="SendEmail" asp-controller="Home" method="post">
+    <div>
+        <label for="To">Recipient Email:</label>
+        <input type="email" id="To" name="To" asp-for="To" required />
+    </div>
+    <div>
+        <label for="Subject">Subject:</label>
+        <input type="text" id="Subject" name="Subject" asp-for="Subject" required />
+    </div>
+    <div>
+        <label for="Body">Message:</label>
+        <textarea id="Body" name="Body" asp-for="Body" required></textarea>
+    </div>
+    <button type="submit">Send</button>
+</form>
